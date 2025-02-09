@@ -4,6 +4,6 @@
   },
   "devDependencies": {
     "phoenix_live_view": "file:../deps/phoenix_live_view",
-    "typescript": "^4.6.3"
+    "typescript": "^5.7.3"
   }
 }

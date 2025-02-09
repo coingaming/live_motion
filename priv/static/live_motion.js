@@ -1,12 +1,8 @@
 var LiveMotion = (() => {
-  var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __defProps = Object.defineProperties;
-  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
   var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
-  var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getOwnPropSymbols = Object.getOwnPropertySymbols;
-  var __getProtoOf = Object.getPrototypeOf;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
   var __propIsEnum = Object.prototype.propertyIsEnumerable;
   var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
@@ -23,501 +19,17 @@ var LiveMotion = (() => {
   };
   var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
   var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
-  var __commonJS = (cb, mod) => function __require() {
-    return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-  };
   var __export = (target, all) => {
     __markAsModule(target);
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
   };
-  var __reExport = (target, module, desc) => {
-    if (module && typeof module === "object" || typeof module === "function") {
-      for (let key of __getOwnPropNames(module))
-        if (!__hasOwnProp.call(target, key) && key !== "default")
-          __defProp(target, key, { get: () => module[key], enumerable: !(desc = __getOwnPropDesc(module, key)) || desc.enumerable });
-    }
-    return target;
-  };
-  var __toModule = (module) => {
-    return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", module && module.__esModule && "default" in module ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
-  };
-
-  // node_modules/tslib/tslib.js
-  var require_tslib = __commonJS({
-    "node_modules/tslib/tslib.js"(exports, module) {
-      var __extends2;
-      var __assign2;
-      var __rest2;
-      var __decorate2;
-      var __param2;
-      var __metadata2;
-      var __awaiter2;
-      var __generator2;
-      var __exportStar2;
-      var __values2;
-      var __read2;
-      var __spread2;
-      var __spreadArrays2;
-      var __spreadArray2;
-      var __await2;
-      var __asyncGenerator2;
-      var __asyncDelegator2;
-      var __asyncValues2;
-      var __makeTemplateObject2;
-      var __importStar2;
-      var __importDefault2;
-      var __classPrivateFieldGet2;
-      var __classPrivateFieldSet2;
-      var __classPrivateFieldIn2;
-      var __createBinding2;
-      (function(factory) {
-        var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
-        if (typeof define === "function" && define.amd) {
-          define("tslib", ["exports"], function(exports2) {
-            factory(createExporter(root, createExporter(exports2)));
-          });
-        } else if (typeof module === "object" && typeof module.exports === "object") {
-          factory(createExporter(root, createExporter(module.exports)));
-        } else {
-          factory(createExporter(root));
-        }
-        function createExporter(exports2, previous) {
-          if (exports2 !== root) {
-            if (typeof Object.create === "function") {
-              Object.defineProperty(exports2, "__esModule", { value: true });
-            } else {
-              exports2.__esModule = true;
-            }
-          }
-          return function(id, v) {
-            return exports2[id] = previous ? previous(id, v) : v;
-          };
-        }
-      })(function(exporter) {
-        var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d, b) {
-          d.__proto__ = b;
-        } || function(d, b) {
-          for (var p in b)
-            if (Object.prototype.hasOwnProperty.call(b, p))
-              d[p] = b[p];
-        };
-        __extends2 = function(d, b) {
-          if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-          extendStatics(d, b);
-          function __() {
-            this.constructor = d;
-          }
-          d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-        };
-        __assign2 = Object.assign || function(t) {
-          for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s)
-              if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-          }
-          return t;
-        };
-        __rest2 = function(s, e) {
-          var t = {};
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-              t[p] = s[p];
-          if (s != null && typeof Object.getOwnPropertySymbols === "function")
-            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-              if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-            }
-          return t;
-        };
-        __decorate2 = function(decorators, target, key, desc) {
-          var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-          if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-            r = Reflect.decorate(decorators, target, key, desc);
-          else
-            for (var i = decorators.length - 1; i >= 0; i--)
-              if (d = decorators[i])
-                r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-          return c > 3 && r && Object.defineProperty(target, key, r), r;
-        };
-        __param2 = function(paramIndex, decorator) {
-          return function(target, key) {
-            decorator(target, key, paramIndex);
-          };
-        };
-        __metadata2 = function(metadataKey, metadataValue) {
-          if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-            return Reflect.metadata(metadataKey, metadataValue);
-        };
-        __awaiter2 = function(thisArg, _arguments, P, generator) {
-          function adopt(value) {
-            return value instanceof P ? value : new P(function(resolve) {
-              resolve(value);
-            });
-          }
-          return new (P || (P = Promise))(function(resolve, reject) {
-            function fulfilled(value) {
-              try {
-                step(generator.next(value));
-              } catch (e) {
-                reject(e);
-              }
-            }
-            function rejected(value) {
-              try {
-                step(generator["throw"](value));
-              } catch (e) {
-                reject(e);
-              }
-            }
-            function step(result) {
-              result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-            }
-            step((generator = generator.apply(thisArg, _arguments || [])).next());
-          });
-        };
-        __generator2 = function(thisArg, body) {
-          var _ = { label: 0, sent: function() {
-            if (t[0] & 1)
-              throw t[1];
-            return t[1];
-          }, trys: [], ops: [] }, f, y, t, g;
-          return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
-            return this;
-          }), g;
-          function verb(n) {
-            return function(v) {
-              return step([n, v]);
-            };
-          }
-          function step(op) {
-            if (f)
-              throw new TypeError("Generator is already executing.");
-            while (_)
-              try {
-                if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-                  return t;
-                if (y = 0, t)
-                  op = [op[0] & 2, t.value];
-                switch (op[0]) {
-                  case 0:
-                  case 1:
-                    t = op;
-                    break;
-                  case 4:
-                    _.label++;
-                    return { value: op[1], done: false };
-                  case 5:
-                    _.label++;
-                    y = op[1];
-                    op = [0];
-                    continue;
-                  case 7:
-                    op = _.ops.pop();
-                    _.trys.pop();
-                    continue;
-                  default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                      _ = 0;
-                      continue;
-                    }
-                    if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                      _.label = op[1];
-                      break;
-                    }
-                    if (op[0] === 6 && _.label < t[1]) {
-                      _.label = t[1];
-                      t = op;
-                      break;
-                    }
-                    if (t && _.label < t[2]) {
-                      _.label = t[2];
-                      _.ops.push(op);
-                      break;
-                    }
-                    if (t[2])
-                      _.ops.pop();
-                    _.trys.pop();
-                    continue;
-                }
-                op = body.call(thisArg, _);
-              } catch (e) {
-                op = [6, e];
-                y = 0;
-              } finally {
-                f = t = 0;
-              }
-            if (op[0] & 5)
-              throw op[1];
-            return { value: op[0] ? op[1] : void 0, done: true };
-          }
-        };
-        __exportStar2 = function(m, o) {
-          for (var p in m)
-            if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
-              __createBinding2(o, m, p);
-        };
-        __createBinding2 = Object.create ? function(o, m, k, k2) {
-          if (k2 === void 0)
-            k2 = k;
-          var desc = Object.getOwnPropertyDescriptor(m, k);
-          if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-            desc = { enumerable: true, get: function() {
-              return m[k];
-            } };
-          }
-          Object.defineProperty(o, k2, desc);
-        } : function(o, m, k, k2) {
-          if (k2 === void 0)
-            k2 = k;
-          o[k2] = m[k];
-        };
-        __values2 = function(o) {
-          var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-          if (m)
-            return m.call(o);
-          if (o && typeof o.length === "number")
-            return {
-              next: function() {
-                if (o && i >= o.length)
-                  o = void 0;
-                return { value: o && o[i++], done: !o };
-              }
-            };
-          throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-        };
-        __read2 = function(o, n) {
-          var m = typeof Symbol === "function" && o[Symbol.iterator];
-          if (!m)
-            return o;
-          var i = m.call(o), r, ar = [], e;
-          try {
-            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
-              ar.push(r.value);
-          } catch (error) {
-            e = { error };
-          } finally {
-            try {
-              if (r && !r.done && (m = i["return"]))
-                m.call(i);
-            } finally {
-              if (e)
-                throw e.error;
-            }
-          }
-          return ar;
-        };
-        __spread2 = function() {
-          for (var ar = [], i = 0; i < arguments.length; i++)
-            ar = ar.concat(__read2(arguments[i]));
-          return ar;
-        };
-        __spreadArrays2 = function() {
-          for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-            s += arguments[i].length;
-          for (var r = Array(s), k = 0, i = 0; i < il; i++)
-            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-              r[k] = a[j];
-          return r;
-        };
-        __spreadArray2 = function(to, from, pack) {
-          if (pack || arguments.length === 2)
-            for (var i = 0, l = from.length, ar; i < l; i++) {
-              if (ar || !(i in from)) {
-                if (!ar)
-                  ar = Array.prototype.slice.call(from, 0, i);
-                ar[i] = from[i];
-              }
-            }
-          return to.concat(ar || Array.prototype.slice.call(from));
-        };
-        __await2 = function(v) {
-          return this instanceof __await2 ? (this.v = v, this) : new __await2(v);
-        };
-        __asyncGenerator2 = function(thisArg, _arguments, generator) {
-          if (!Symbol.asyncIterator)
-            throw new TypeError("Symbol.asyncIterator is not defined.");
-          var g = generator.apply(thisArg, _arguments || []), i, q = [];
-          return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-            return this;
-          }, i;
-          function verb(n) {
-            if (g[n])
-              i[n] = function(v) {
-                return new Promise(function(a, b) {
-                  q.push([n, v, a, b]) > 1 || resume(n, v);
-                });
-              };
-          }
-          function resume(n, v) {
-            try {
-              step(g[n](v));
-            } catch (e) {
-              settle(q[0][3], e);
-            }
-          }
-          function step(r) {
-            r.value instanceof __await2 ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
-          }
-          function fulfill(value) {
-            resume("next", value);
-          }
-          function reject(value) {
-            resume("throw", value);
-          }
-          function settle(f, v) {
-            if (f(v), q.shift(), q.length)
-              resume(q[0][0], q[0][1]);
-          }
-        };
-        __asyncDelegator2 = function(o) {
-          var i, p;
-          return i = {}, verb("next"), verb("throw", function(e) {
-            throw e;
-          }), verb("return"), i[Symbol.iterator] = function() {
-            return this;
-          }, i;
-          function verb(n, f) {
-            i[n] = o[n] ? function(v) {
-              return (p = !p) ? { value: __await2(o[n](v)), done: n === "return" } : f ? f(v) : v;
-            } : f;
-          }
-        };
-        __asyncValues2 = function(o) {
-          if (!Symbol.asyncIterator)
-            throw new TypeError("Symbol.asyncIterator is not defined.");
-          var m = o[Symbol.asyncIterator], i;
-          return m ? m.call(o) : (o = typeof __values2 === "function" ? __values2(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-            return this;
-          }, i);
-          function verb(n) {
-            i[n] = o[n] && function(v) {
-              return new Promise(function(resolve, reject) {
-                v = o[n](v), settle(resolve, reject, v.done, v.value);
-              });
-            };
-          }
-          function settle(resolve, reject, d, v) {
-            Promise.resolve(v).then(function(v2) {
-              resolve({ value: v2, done: d });
-            }, reject);
-          }
-        };
-        __makeTemplateObject2 = function(cooked, raw) {
-          if (Object.defineProperty) {
-            Object.defineProperty(cooked, "raw", { value: raw });
-          } else {
-            cooked.raw = raw;
-          }
-          return cooked;
-        };
-        var __setModuleDefault = Object.create ? function(o, v) {
-          Object.defineProperty(o, "default", { enumerable: true, value: v });
-        } : function(o, v) {
-          o["default"] = v;
-        };
-        __importStar2 = function(mod) {
-          if (mod && mod.__esModule)
-            return mod;
-          var result = {};
-          if (mod != null) {
-            for (var k in mod)
-              if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-                __createBinding2(result, mod, k);
-          }
-          __setModuleDefault(result, mod);
-          return result;
-        };
-        __importDefault2 = function(mod) {
-          return mod && mod.__esModule ? mod : { "default": mod };
-        };
-        __classPrivateFieldGet2 = function(receiver, state, kind, f) {
-          if (kind === "a" && !f)
-            throw new TypeError("Private accessor was defined without a getter");
-          if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-            throw new TypeError("Cannot read private member from an object whose class did not declare it");
-          return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-        };
-        __classPrivateFieldSet2 = function(receiver, state, value, kind, f) {
-          if (kind === "m")
-            throw new TypeError("Private method is not writable");
-          if (kind === "a" && !f)
-            throw new TypeError("Private accessor was defined without a setter");
-          if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-            throw new TypeError("Cannot write private member to an object whose class did not declare it");
-          return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
-        };
-        __classPrivateFieldIn2 = function(state, receiver) {
-          if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
-            throw new TypeError("Cannot use 'in' operator on non-object");
-          return typeof state === "function" ? receiver === state : state.has(receiver);
-        };
-        exporter("__extends", __extends2);
-        exporter("__assign", __assign2);
-        exporter("__rest", __rest2);
-        exporter("__decorate", __decorate2);
-        exporter("__param", __param2);
-        exporter("__metadata", __metadata2);
-        exporter("__awaiter", __awaiter2);
-        exporter("__generator", __generator2);
-        exporter("__exportStar", __exportStar2);
-        exporter("__createBinding", __createBinding2);
-        exporter("__values", __values2);
-        exporter("__read", __read2);
-        exporter("__spread", __spread2);
-        exporter("__spreadArrays", __spreadArrays2);
-        exporter("__spreadArray", __spreadArray2);
-        exporter("__await", __await2);
-        exporter("__asyncGenerator", __asyncGenerator2);
-        exporter("__asyncDelegator", __asyncDelegator2);
-        exporter("__asyncValues", __asyncValues2);
-        exporter("__makeTemplateObject", __makeTemplateObject2);
-        exporter("__importStar", __importStar2);
-        exporter("__importDefault", __importDefault2);
-        exporter("__classPrivateFieldGet", __classPrivateFieldGet2);
-        exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
-        exporter("__classPrivateFieldIn", __classPrivateFieldIn2);
-      });
-    }
-  });
 
   // js/live_motion/index.ts
   var live_motion_exports = {};
   __export(live_motion_exports, {
     createLiveMotion: () => createLiveMotion
   });
-
-  // node_modules/@motionone/types/dist/MotionValue.es.js
-  var MotionValue = class {
-    setAnimation(animation) {
-      this.animation = animation;
-      animation === null || animation === void 0 ? void 0 : animation.finished.then(() => this.clearAnimation()).catch(() => {
-      });
-    }
-    clearAnimation() {
-      this.animation = this.generator = void 0;
-    }
-  };
-
-  // node_modules/@motionone/dom/dist/animate/data.es.js
-  var data = new WeakMap();
-  function getAnimationData(element) {
-    if (!data.has(element)) {
-      data.set(element, {
-        transforms: [],
-        values: new Map()
-      });
-    }
-    return data.get(element);
-  }
-  function getMotionValue(motionValues, name) {
-    if (!motionValues.has(name)) {
-      motionValues.set(name, new MotionValue());
-    }
-    return motionValues.get(name);
-  }
 
   // node_modules/@motionone/utils/dist/array.es.js
   function addUniqueItem(array, item) {
@@ -609,6 +121,9 @@ var LiveMotion = (() => {
   // node_modules/@motionone/utils/dist/is-function.es.js
   var isFunction = (value) => typeof value === "function";
 
+  // node_modules/@motionone/utils/dist/is-string.es.js
+  var isString = (value) => typeof value === "string";
+
   // node_modules/@motionone/utils/dist/time.es.js
   var time = {
     ms: (seconds) => seconds * 1e3,
@@ -618,6 +133,240 @@ var LiveMotion = (() => {
   // node_modules/@motionone/utils/dist/velocity.es.js
   function velocityPerSecond(velocity, frameDuration) {
     return frameDuration ? velocity * (1e3 / frameDuration) : 0;
+  }
+
+  // node_modules/@motionone/easing/dist/cubic-bezier.es.js
+  var calcBezier = (t, a1, a2) => (((1 - 3 * a2 + 3 * a1) * t + (3 * a2 - 6 * a1)) * t + 3 * a1) * t;
+  var subdivisionPrecision = 1e-7;
+  var subdivisionMaxIterations = 12;
+  function binarySubdivide(x, lowerBound, upperBound, mX1, mX2) {
+    let currentX;
+    let currentT;
+    let i = 0;
+    do {
+      currentT = lowerBound + (upperBound - lowerBound) / 2;
+      currentX = calcBezier(currentT, mX1, mX2) - x;
+      if (currentX > 0) {
+        upperBound = currentT;
+      } else {
+        lowerBound = currentT;
+      }
+    } while (Math.abs(currentX) > subdivisionPrecision && ++i < subdivisionMaxIterations);
+    return currentT;
+  }
+  function cubicBezier(mX1, mY1, mX2, mY2) {
+    if (mX1 === mY1 && mX2 === mY2)
+      return noopReturn;
+    const getTForX = (aX) => binarySubdivide(aX, 0, 1, mX1, mX2);
+    return (t) => t === 0 || t === 1 ? t : calcBezier(getTForX(t), mY1, mY2);
+  }
+
+  // node_modules/@motionone/easing/dist/steps.es.js
+  var steps = (steps2, direction = "end") => (progress2) => {
+    progress2 = direction === "end" ? Math.min(progress2, 0.999) : Math.max(progress2, 1e-3);
+    const expanded = progress2 * steps2;
+    const rounded = direction === "end" ? Math.floor(expanded) : Math.ceil(expanded);
+    return clamp(0, 1, rounded / steps2);
+  };
+
+  // node_modules/@motionone/animation/dist/utils/easing.es.js
+  var namedEasings = {
+    ease: cubicBezier(0.25, 0.1, 0.25, 1),
+    "ease-in": cubicBezier(0.42, 0, 1, 1),
+    "ease-in-out": cubicBezier(0.42, 0, 0.58, 1),
+    "ease-out": cubicBezier(0, 0, 0.58, 1)
+  };
+  var functionArgsRegex = /\((.*?)\)/;
+  function getEasingFunction(definition) {
+    if (isFunction(definition))
+      return definition;
+    if (isCubicBezier(definition))
+      return cubicBezier(...definition);
+    const namedEasing = namedEasings[definition];
+    if (namedEasing)
+      return namedEasing;
+    if (definition.startsWith("steps")) {
+      const args = functionArgsRegex.exec(definition);
+      if (args) {
+        const argsArray = args[1].split(",");
+        return steps(parseFloat(argsArray[0]), argsArray[1].trim());
+      }
+    }
+    return noopReturn;
+  }
+
+  // node_modules/@motionone/animation/dist/Animation.es.js
+  var Animation = class {
+    constructor(output, keyframes = [0, 1], { easing, duration: initialDuration = defaults.duration, delay = defaults.delay, endDelay = defaults.endDelay, repeat = defaults.repeat, offset, direction = "normal", autoplay = true } = {}) {
+      this.startTime = null;
+      this.rate = 1;
+      this.t = 0;
+      this.cancelTimestamp = null;
+      this.easing = noopReturn;
+      this.duration = 0;
+      this.totalDuration = 0;
+      this.repeat = 0;
+      this.playState = "idle";
+      this.finished = new Promise((resolve, reject) => {
+        this.resolve = resolve;
+        this.reject = reject;
+      });
+      easing = easing || defaults.easing;
+      if (isEasingGenerator(easing)) {
+        const custom = easing.createAnimation(keyframes);
+        easing = custom.easing;
+        keyframes = custom.keyframes || keyframes;
+        initialDuration = custom.duration || initialDuration;
+      }
+      this.repeat = repeat;
+      this.easing = isEasingList(easing) ? noopReturn : getEasingFunction(easing);
+      this.updateDuration(initialDuration);
+      const interpolate$1 = interpolate(keyframes, offset, isEasingList(easing) ? easing.map(getEasingFunction) : noopReturn);
+      this.tick = (timestamp) => {
+        var _a;
+        delay = delay;
+        let t = 0;
+        if (this.pauseTime !== void 0) {
+          t = this.pauseTime;
+        } else {
+          t = (timestamp - this.startTime) * this.rate;
+        }
+        this.t = t;
+        t /= 1e3;
+        t = Math.max(t - delay, 0);
+        if (this.playState === "finished" && this.pauseTime === void 0) {
+          t = this.totalDuration;
+        }
+        const progress2 = t / this.duration;
+        let currentIteration = Math.floor(progress2);
+        let iterationProgress = progress2 % 1;
+        if (!iterationProgress && progress2 >= 1) {
+          iterationProgress = 1;
+        }
+        iterationProgress === 1 && currentIteration--;
+        const iterationIsOdd = currentIteration % 2;
+        if (direction === "reverse" || direction === "alternate" && iterationIsOdd || direction === "alternate-reverse" && !iterationIsOdd) {
+          iterationProgress = 1 - iterationProgress;
+        }
+        const p = t >= this.totalDuration ? 1 : Math.min(iterationProgress, 1);
+        const latest = interpolate$1(this.easing(p));
+        output(latest);
+        const isAnimationFinished = this.pauseTime === void 0 && (this.playState === "finished" || t >= this.totalDuration + endDelay);
+        if (isAnimationFinished) {
+          this.playState = "finished";
+          (_a = this.resolve) === null || _a === void 0 ? void 0 : _a.call(this, latest);
+        } else if (this.playState !== "idle") {
+          this.frameRequestId = requestAnimationFrame(this.tick);
+        }
+      };
+      if (autoplay)
+        this.play();
+    }
+    play() {
+      const now = performance.now();
+      this.playState = "running";
+      if (this.pauseTime !== void 0) {
+        this.startTime = now - this.pauseTime;
+      } else if (!this.startTime) {
+        this.startTime = now;
+      }
+      this.cancelTimestamp = this.startTime;
+      this.pauseTime = void 0;
+      this.frameRequestId = requestAnimationFrame(this.tick);
+    }
+    pause() {
+      this.playState = "paused";
+      this.pauseTime = this.t;
+    }
+    finish() {
+      this.playState = "finished";
+      this.tick(0);
+    }
+    stop() {
+      var _a;
+      this.playState = "idle";
+      if (this.frameRequestId !== void 0) {
+        cancelAnimationFrame(this.frameRequestId);
+      }
+      (_a = this.reject) === null || _a === void 0 ? void 0 : _a.call(this, false);
+    }
+    cancel() {
+      this.stop();
+      this.tick(this.cancelTimestamp);
+    }
+    reverse() {
+      this.rate *= -1;
+    }
+    commitStyles() {
+    }
+    updateDuration(duration) {
+      this.duration = duration;
+      this.totalDuration = duration * (this.repeat + 1);
+    }
+    get currentTime() {
+      return this.t;
+    }
+    set currentTime(t) {
+      if (this.pauseTime !== void 0 || this.rate === 0) {
+        this.pauseTime = t;
+      } else {
+        this.startTime = performance.now() - t / this.rate;
+      }
+    }
+    get playbackRate() {
+      return this.rate;
+    }
+    set playbackRate(rate) {
+      this.rate = rate;
+    }
+  };
+
+  // node_modules/hey-listen/dist/hey-listen.es.js
+  var warning = function() {
+  };
+  var invariant = function() {
+  };
+  if (true) {
+    warning = function(check, message) {
+      if (!check && typeof console !== "undefined") {
+        console.warn(message);
+      }
+    };
+    invariant = function(check, message) {
+      if (!check) {
+        throw new Error(message);
+      }
+    };
+  }
+
+  // node_modules/@motionone/types/dist/MotionValue.es.js
+  var MotionValue = class {
+    setAnimation(animation) {
+      this.animation = animation;
+      animation === null || animation === void 0 ? void 0 : animation.finished.then(() => this.clearAnimation()).catch(() => {
+      });
+    }
+    clearAnimation() {
+      this.animation = this.generator = void 0;
+    }
+  };
+
+  // node_modules/@motionone/dom/dist/animate/data.es.js
+  var data = new WeakMap();
+  function getAnimationData(element) {
+    if (!data.has(element)) {
+      data.set(element, {
+        transforms: [],
+        values: new Map()
+      });
+    }
+    return data.get(element);
+  }
+  function getMotionValue(motionValues, name) {
+    if (!motionValues.has(name)) {
+      motionValues.set(name, new MotionValue());
+    }
+    return motionValues.get(name);
   }
 
   // node_modules/@motionone/dom/dist/animate/utils/transforms.es.js
@@ -687,192 +436,6 @@ var LiveMotion = (() => {
     } catch (e) {
     }
   }
-
-  // node_modules/@motionone/easing/dist/cubic-bezier.es.js
-  var calcBezier = (t, a1, a2) => (((1 - 3 * a2 + 3 * a1) * t + (3 * a2 - 6 * a1)) * t + 3 * a1) * t;
-  var subdivisionPrecision = 1e-7;
-  var subdivisionMaxIterations = 12;
-  function binarySubdivide(x, lowerBound, upperBound, mX1, mX2) {
-    let currentX;
-    let currentT;
-    let i = 0;
-    do {
-      currentT = lowerBound + (upperBound - lowerBound) / 2;
-      currentX = calcBezier(currentT, mX1, mX2) - x;
-      if (currentX > 0) {
-        upperBound = currentT;
-      } else {
-        lowerBound = currentT;
-      }
-    } while (Math.abs(currentX) > subdivisionPrecision && ++i < subdivisionMaxIterations);
-    return currentT;
-  }
-  function cubicBezier(mX1, mY1, mX2, mY2) {
-    if (mX1 === mY1 && mX2 === mY2)
-      return noopReturn;
-    const getTForX = (aX) => binarySubdivide(aX, 0, 1, mX1, mX2);
-    return (t) => t === 0 || t === 1 ? t : calcBezier(getTForX(t), mY1, mY2);
-  }
-
-  // node_modules/@motionone/easing/dist/steps.es.js
-  var steps = (steps2, direction = "end") => (progress2) => {
-    progress2 = direction === "end" ? Math.min(progress2, 0.999) : Math.max(progress2, 1e-3);
-    const expanded = progress2 * steps2;
-    const rounded = direction === "end" ? Math.floor(expanded) : Math.ceil(expanded);
-    return clamp(0, 1, rounded / steps2);
-  };
-
-  // node_modules/@motionone/animation/dist/utils/easing.es.js
-  var namedEasings = {
-    ease: cubicBezier(0.25, 0.1, 0.25, 1),
-    "ease-in": cubicBezier(0.42, 0, 1, 1),
-    "ease-in-out": cubicBezier(0.42, 0, 0.58, 1),
-    "ease-out": cubicBezier(0, 0, 0.58, 1)
-  };
-  var functionArgsRegex = /\((.*?)\)/;
-  function getEasingFunction(definition) {
-    if (isFunction(definition))
-      return definition;
-    if (Array.isArray(definition))
-      return cubicBezier(...definition);
-    if (namedEasings[definition])
-      return namedEasings[definition];
-    if (definition.startsWith("steps")) {
-      const args = functionArgsRegex.exec(definition);
-      if (args) {
-        const argsArray = args[1].split(",");
-        return steps(parseFloat(argsArray[0]), argsArray[1].trim());
-      }
-    }
-    return noopReturn;
-  }
-
-  // node_modules/@motionone/animation/dist/Animation.es.js
-  var Animation = class {
-    constructor(output, keyframes = [0, 1], { easing, duration: initialDuration = defaults.duration, delay = defaults.delay, endDelay = defaults.endDelay, repeat = defaults.repeat, offset, direction = "normal" } = {}) {
-      this.startTime = null;
-      this.rate = 1;
-      this.t = 0;
-      this.cancelTimestamp = null;
-      this.easing = noopReturn;
-      this.duration = 0;
-      this.totalDuration = 0;
-      this.repeat = 0;
-      this.playState = "idle";
-      this.finished = new Promise((resolve, reject) => {
-        this.resolve = resolve;
-        this.reject = reject;
-      });
-      easing = easing || defaults.easing;
-      if (isEasingGenerator(easing)) {
-        const custom = easing.createAnimation(keyframes, () => "0", true);
-        easing = custom.easing;
-        if (custom.keyframes !== void 0)
-          keyframes = custom.keyframes;
-        if (custom.duration !== void 0)
-          initialDuration = custom.duration;
-      }
-      this.repeat = repeat;
-      this.easing = isEasingList(easing) ? noopReturn : getEasingFunction(easing);
-      this.updateDuration(initialDuration);
-      const interpolate$1 = interpolate(keyframes, offset, isEasingList(easing) ? easing.map(getEasingFunction) : noopReturn);
-      this.tick = (timestamp) => {
-        var _a;
-        delay = delay;
-        let t = 0;
-        if (this.pauseTime !== void 0) {
-          t = this.pauseTime;
-        } else {
-          t = (timestamp - this.startTime) * this.rate;
-        }
-        this.t = t;
-        t /= 1e3;
-        t = Math.max(t - delay, 0);
-        if (this.playState === "finished" && this.pauseTime === void 0) {
-          t = this.totalDuration;
-        }
-        const progress2 = t / this.duration;
-        let currentIteration = Math.floor(progress2);
-        let iterationProgress = progress2 % 1;
-        if (!iterationProgress && progress2 >= 1) {
-          iterationProgress = 1;
-        }
-        iterationProgress === 1 && currentIteration--;
-        const iterationIsOdd = currentIteration % 2;
-        if (direction === "reverse" || direction === "alternate" && iterationIsOdd || direction === "alternate-reverse" && !iterationIsOdd) {
-          iterationProgress = 1 - iterationProgress;
-        }
-        const p = t >= this.totalDuration ? 1 : Math.min(iterationProgress, 1);
-        const latest = interpolate$1(this.easing(p));
-        output(latest);
-        const isAnimationFinished = this.pauseTime === void 0 && (this.playState === "finished" || t >= this.totalDuration + endDelay);
-        if (isAnimationFinished) {
-          this.playState = "finished";
-          (_a = this.resolve) === null || _a === void 0 ? void 0 : _a.call(this, latest);
-        } else if (this.playState !== "idle") {
-          this.frameRequestId = requestAnimationFrame(this.tick);
-        }
-      };
-      this.play();
-    }
-    play() {
-      const now = performance.now();
-      this.playState = "running";
-      if (this.pauseTime !== void 0) {
-        this.startTime = now - this.pauseTime;
-      } else if (!this.startTime) {
-        this.startTime = now;
-      }
-      this.cancelTimestamp = this.startTime;
-      this.pauseTime = void 0;
-      this.frameRequestId = requestAnimationFrame(this.tick);
-    }
-    pause() {
-      this.playState = "paused";
-      this.pauseTime = this.t;
-    }
-    finish() {
-      this.playState = "finished";
-      this.tick(0);
-    }
-    stop() {
-      var _a;
-      this.playState = "idle";
-      if (this.frameRequestId !== void 0) {
-        cancelAnimationFrame(this.frameRequestId);
-      }
-      (_a = this.reject) === null || _a === void 0 ? void 0 : _a.call(this, false);
-    }
-    cancel() {
-      this.stop();
-      this.tick(this.cancelTimestamp);
-    }
-    reverse() {
-      this.rate *= -1;
-    }
-    commitStyles() {
-    }
-    updateDuration(duration) {
-      this.duration = duration;
-      this.totalDuration = duration * (this.repeat + 1);
-    }
-    get currentTime() {
-      return this.t;
-    }
-    set currentTime(t) {
-      if (this.pauseTime !== void 0 || this.rate === 0) {
-        this.pauseTime = t;
-      } else {
-        this.startTime = performance.now() - t / this.rate;
-      }
-    }
-    get playbackRate() {
-      return this.rate;
-    }
-    set playbackRate(rate) {
-      this.rate = rate;
-    }
-  };
 
   // node_modules/@motionone/dom/dist/animate/utils/feature-detection.es.js
   var testAnimation = (keyframes, options) => document.createElement("div").animate(keyframes, options);
@@ -981,15 +544,28 @@ var LiveMotion = (() => {
     }
   }
 
+  // node_modules/@motionone/dom/dist/animate/utils/get-unit.es.js
+  function getUnitConverter(keyframes, definition) {
+    var _a;
+    let toUnit = (definition === null || definition === void 0 ? void 0 : definition.toDefaultUnit) || noopReturn;
+    const finalKeyframe = keyframes[keyframes.length - 1];
+    if (isString(finalKeyframe)) {
+      const unit = ((_a = finalKeyframe.match(/(-?[\d.]+)([a-z%]*)/)) === null || _a === void 0 ? void 0 : _a[2]) || "";
+      if (unit)
+        toUnit = (value) => value + unit;
+    }
+    return toUnit;
+  }
+
   // node_modules/@motionone/dom/dist/animate/animate-style.es.js
   function getDevToolsRecord() {
     return window.__MOTION_DEV_TOOLS_RECORD;
   }
-  function animateStyle(element, key, keyframesDefinition, options = {}) {
+  function animateStyle(element, key, keyframesDefinition, options = {}, AnimationPolyfill) {
     const record = getDevToolsRecord();
     const isRecording = options.record !== false && record;
     let animation;
-    let { duration = defaults.duration, delay = defaults.delay, endDelay = defaults.endDelay, repeat = defaults.repeat, easing = defaults.easing, direction, offset, allowWebkitAcceleration = false } = options;
+    let { duration = defaults.duration, delay = defaults.delay, endDelay = defaults.endDelay, repeat = defaults.repeat, easing = defaults.easing, persist = false, direction, offset, allowWebkitAcceleration = false, autoplay = true } = options;
     const data2 = getAnimationData(element);
     const valueIsTransform = isTransform(key);
     let canAnimateNatively = supports.waapi();
@@ -1004,13 +580,12 @@ var LiveMotion = (() => {
         return (_b = (_a = style.get(element, name)) !== null && _a !== void 0 ? _a : definition === null || definition === void 0 ? void 0 : definition.initialValue) !== null && _b !== void 0 ? _b : 0;
       };
       let keyframes = hydrateKeyframes(keyframesList(keyframesDefinition), readInitialValue);
+      const toUnit = getUnitConverter(keyframes, definition);
       if (isEasingGenerator(easing)) {
-        const custom = easing.createAnimation(keyframes, readInitialValue, valueIsTransform, name, motionValue);
+        const custom = easing.createAnimation(keyframes, key !== "opacity", readInitialValue, name, motionValue);
         easing = custom.easing;
-        if (custom.keyframes !== void 0)
-          keyframes = custom.keyframes;
-        if (custom.duration !== void 0)
-          duration = custom.duration;
+        keyframes = custom.keyframes || keyframes;
+        duration = custom.duration || duration;
       }
       if (isCssVar(name)) {
         if (supports.cssRegisterProperty()) {
@@ -1051,22 +626,21 @@ var LiveMotion = (() => {
         }
         const target = keyframes[keyframes.length - 1];
         animation.finished.then(() => {
+          if (persist)
+            return;
           style.set(element, name, target);
           animation.cancel();
         }).catch(noop);
         if (!allowWebkitAcceleration)
           animation.playbackRate = 1.000001;
-      } else if (valueIsTransform) {
+      } else if (AnimationPolyfill && valueIsTransform) {
         keyframes = keyframes.map((value) => typeof value === "string" ? parseFloat(value) : value);
         if (keyframes.length === 1) {
           keyframes.unshift(parseFloat(readInitialValue()));
         }
-        const render = (latest) => {
-          if (definition)
-            latest = definition.toDefaultUnit(latest);
-          style.set(element, name, latest);
-        };
-        animation = new Animation(render, keyframes, Object.assign(Object.assign({}, options), {
+        animation = new AnimationPolyfill((latest) => {
+          style.set(element, name, toUnit ? toUnit(latest) : latest);
+        }, keyframes, Object.assign(Object.assign({}, options), {
           duration,
           easing
         }));
@@ -1084,6 +658,8 @@ var LiveMotion = (() => {
         }, "motion-one");
       }
       motionValue.setAnimation(animation);
+      if (animation && !autoplay)
+        animation.pause();
       return animation;
     };
   }
@@ -1107,53 +683,23 @@ var LiveMotion = (() => {
     return Array.from(elements || []);
   }
 
-  // node_modules/tslib/modules/index.js
-  var import_tslib = __toModule(require_tslib());
-  var {
-    __extends,
-    __assign,
-    __rest,
-    __decorate,
-    __param,
-    __metadata,
-    __awaiter,
-    __generator,
-    __exportStar,
-    __createBinding,
-    __values,
-    __read,
-    __spread,
-    __spreadArrays,
-    __spreadArray,
-    __await,
-    __asyncGenerator,
-    __asyncDelegator,
-    __asyncValues,
-    __makeTemplateObject,
-    __importStar,
-    __importDefault,
-    __classPrivateFieldGet,
-    __classPrivateFieldSet,
-    __classPrivateFieldIn
-  } = import_tslib.default;
-
-  // node_modules/hey-listen/dist/hey-listen.es.js
-  var warning = function() {
-  };
-  var invariant = function() {
-  };
-  if (true) {
-    warning = function(check, message) {
-      if (!check && typeof console !== "undefined") {
-        console.warn(message);
+  // node_modules/tslib/tslib.es6.mjs
+  function __rest(s, e) {
+    var t = {};
+    for (var p in s)
+      if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+      for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+        if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+          t[p[i]] = s[p[i]];
       }
-    };
-    invariant = function(check, message) {
-      if (!check) {
-        throw new Error(message);
-      }
-    };
+    return t;
   }
+  var _SuppressedError = typeof SuppressedError === "function" ? SuppressedError : function(error, suppressed, message) {
+    var e = new Error(message);
+    return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+  };
 
   // node_modules/@motionone/generators/dist/utils/velocity.es.js
   var sampleT = 5;
@@ -1178,7 +724,7 @@ var LiveMotion = (() => {
   }
 
   // node_modules/@motionone/generators/dist/spring/index.es.js
-  var spring = ({ stiffness = defaults2.stiffness, damping = defaults2.damping, mass = defaults2.mass, from = 0, to = 1, velocity = 0, restSpeed = 2, restDistance = 0.5 } = {}) => {
+  var spring = ({ stiffness = defaults2.stiffness, damping = defaults2.damping, mass = defaults2.mass, from = 0, to = 1, velocity = 0, restSpeed, restDistance } = {}) => {
     velocity = velocity ? time.s(velocity) : 0;
     const state = {
       done: false,
@@ -1189,6 +735,9 @@ var LiveMotion = (() => {
     const initialDelta = to - from;
     const undampedAngularFreq = Math.sqrt(stiffness / mass) / 1e3;
     const dampingRatio = calcDampingRatio(stiffness, damping, mass);
+    const isGranularScale = Math.abs(initialDelta) < 5;
+    restSpeed || (restSpeed = isGranularScale ? 0.01 : 2);
+    restDistance || (restDistance = isGranularScale ? 5e-3 : 0.5);
     let resolveSpring;
     if (dampingRatio < 1) {
       const angularFreq = undampedAngularFreq * Math.sqrt(1 - dampingRatio * dampingRatio);
@@ -1278,14 +827,14 @@ var LiveMotion = (() => {
   // node_modules/@motionone/generators/dist/utils/pregenerate-keyframes.es.js
   var timeStep = 10;
   var maxDuration = 1e4;
-  function pregenerateKeyframes(generator) {
+  function pregenerateKeyframes(generator, toUnit = noopReturn) {
     let overshootDuration = void 0;
     let timestamp = timeStep;
     let state = generator(0);
-    const keyframes = [state.current];
+    const keyframes = [toUnit(state.current)];
     while (!state.done && timestamp < maxDuration) {
       state = generator(timestamp);
-      keyframes.push(state.done ? state.target : state.current);
+      keyframes.push(toUnit(state.done ? state.target : state.current));
       if (overshootDuration === void 0 && state.hasReachedTarget) {
         overshootDuration = timestamp;
       }
@@ -1302,6 +851,12 @@ var LiveMotion = (() => {
   }
 
   // node_modules/@motionone/dom/dist/easing/create-generator-easing.es.js
+  function canGenerate(value) {
+    return isNumber(value) && !isNaN(value);
+  }
+  function getAsNumber(value) {
+    return isString(value) ? parseFloat(value) : value;
+  }
   function createGeneratorEasing(createGenerator) {
     const keyframesCache = new WeakMap();
     return (options = {}) => {
@@ -1312,51 +867,54 @@ var LiveMotion = (() => {
           generatorCache.set(key, createGenerator(Object.assign({
             from,
             to,
-            velocity,
-            restSpeed: isScale ? 0.05 : 2,
-            restDistance: isScale ? 0.01 : 0.5
+            velocity
           }, options)));
         }
         return generatorCache.get(key);
       };
-      const getKeyframes = (generator) => {
+      const getKeyframes = (generator, toUnit) => {
         if (!keyframesCache.has(generator)) {
-          keyframesCache.set(generator, pregenerateKeyframes(generator));
+          keyframesCache.set(generator, pregenerateKeyframes(generator, toUnit));
         }
         return keyframesCache.get(generator);
       };
       return {
-        createAnimation: (keyframes, getOrigin, canUseGenerator, name, motionValue) => {
-          var _a, _b;
+        createAnimation: (keyframes, shouldGenerate = true, getOrigin, name, motionValue) => {
           let settings;
+          let origin;
+          let target;
+          let velocity = 0;
+          let toUnit = noopReturn;
           const numKeyframes = keyframes.length;
-          let shouldUseGenerator = canUseGenerator && numKeyframes <= 2 && keyframes.every(isNumberOrNull);
-          if (shouldUseGenerator) {
-            const target = keyframes[numKeyframes - 1];
-            const unresolvedOrigin = numKeyframes === 1 ? null : keyframes[0];
-            let velocity = 0;
-            let origin = 0;
-            const prevGenerator = motionValue === null || motionValue === void 0 ? void 0 : motionValue.generator;
-            if (prevGenerator) {
-              const { animation, generatorStartTime } = motionValue;
-              const startTime = (animation === null || animation === void 0 ? void 0 : animation.startTime) || generatorStartTime || 0;
-              const currentTime = (animation === null || animation === void 0 ? void 0 : animation.currentTime) || performance.now() - startTime;
-              const prevGeneratorCurrent = prevGenerator(currentTime).current;
-              origin = (_a = unresolvedOrigin) !== null && _a !== void 0 ? _a : prevGeneratorCurrent;
-              if (numKeyframes === 1 || numKeyframes === 2 && keyframes[0] === null) {
-                velocity = calcGeneratorVelocity((t) => prevGenerator(t).current, currentTime, prevGeneratorCurrent);
-              }
+          if (shouldGenerate) {
+            toUnit = getUnitConverter(keyframes, name ? transformDefinitions.get(getStyleName(name)) : void 0);
+            const targetDefinition = keyframes[numKeyframes - 1];
+            target = getAsNumber(targetDefinition);
+            if (numKeyframes > 1 && keyframes[0] !== null) {
+              origin = getAsNumber(keyframes[0]);
             } else {
-              origin = (_b = unresolvedOrigin) !== null && _b !== void 0 ? _b : parseFloat(getOrigin());
+              const prevGenerator = motionValue === null || motionValue === void 0 ? void 0 : motionValue.generator;
+              if (prevGenerator) {
+                const { animation, generatorStartTime } = motionValue;
+                const startTime = (animation === null || animation === void 0 ? void 0 : animation.startTime) || generatorStartTime || 0;
+                const currentTime = (animation === null || animation === void 0 ? void 0 : animation.currentTime) || performance.now() - startTime;
+                const prevGeneratorCurrent = prevGenerator(currentTime).current;
+                origin = prevGeneratorCurrent;
+                velocity = calcGeneratorVelocity((t) => prevGenerator(t).current, currentTime, prevGeneratorCurrent);
+              } else if (getOrigin) {
+                origin = getAsNumber(getOrigin());
+              }
             }
+          }
+          if (canGenerate(origin) && canGenerate(target)) {
             const generator = getGenerator(origin, target, velocity, name === null || name === void 0 ? void 0 : name.includes("scale"));
-            const keyframesMetadata = getKeyframes(generator);
-            settings = Object.assign(Object.assign({}, keyframesMetadata), { easing: "linear" });
+            settings = Object.assign(Object.assign({}, getKeyframes(generator, toUnit)), { easing: "linear" });
             if (motionValue) {
               motionValue.generator = generator;
               motionValue.generatorStartTime = performance.now();
             }
-          } else {
+          }
+          if (!settings) {
             const keyframesMetadata = getKeyframes(getGenerator(0, 100));
             settings = {
               easing: "ease",
@@ -1368,7 +926,6 @@ var LiveMotion = (() => {
       };
     };
   }
-  var isNumberOrNull = (value) => typeof value !== "string";
 
   // node_modules/@motionone/dom/dist/easing/spring/index.es.js
   var spring2 = createGeneratorEasing(spring);
@@ -1589,7 +1146,7 @@ var LiveMotion = (() => {
         }
         if (hasChanged(prevTarget[key], target[key])) {
           (_a3 = baseTarget[key]) !== null && _a3 !== void 0 ? _a3 : baseTarget[key] = style.get(element, key);
-          animationFactories.push(animateStyle(element, key, target[key], animationOptions[key]));
+          animationFactories.push(animateStyle(element, key, target[key], animationOptions[key], Animation));
         }
       });
       yield;

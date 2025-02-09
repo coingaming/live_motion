@@ -32,12 +32,12 @@ defmodule LiveMotion.MixProject do
   defp deps do
     [
       {:phoenix, ">= 1.6.0 and < 1.8.0"},
-      {:phoenix_html, "~> 3.1"},
-      {:phoenix_live_view, "~> 0.18"},
-      {:jason, "~> 1.3", optional: true},
-      {:esbuild, "~> 0.2", only: :dev},
-      {:telemetry, "~> 0.4.2 or ~> 1.0"},
-      {:ex_doc, "~> 0.29", only: :dev, runtime: false}
+      {:phoenix_html, "~> 4.0"},
+      {:phoenix_live_view, "~> 1.0"},
+      {:jason, "~> 1.4.4", optional: true},
+      {:esbuild, "~> 0.8", only: :dev},
+      {:telemetry, "~> 1.3"},
+      {:ex_doc, "~> 0.37", only: :dev, runtime: false}
     ]
   end
 
